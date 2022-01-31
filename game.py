@@ -13,7 +13,6 @@ print("Rock, Paper, Scissors, Shoot!")
 userInput = input("Please enter your selection: 'rock', 'paper', 'scissors'").lower()
 
 
-
 #VALIDATIONS
 print("USER CHOSE:", userInput)
 
@@ -22,6 +21,9 @@ if userInput != "rock" and userInput != "paper" and userInput != "scissors":
     exit()
     
 # COMPUTER CHOICE
+import random # this is necessary to avoid a NameError when using the randint function below
+computerChoice = ["rock", "paper", "scissors"]
+print("The computer selected", random.choice(computerChoice))
 
 # DETERMINE THE WINNER
 
