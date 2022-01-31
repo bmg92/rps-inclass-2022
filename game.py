@@ -23,8 +23,26 @@ if userInput != "rock" and userInput != "paper" and userInput != "scissors":
 # COMPUTER CHOICE
 import random # this is necessary to avoid a NameError when using the randint function below
 computerChoice = ["rock", "paper", "scissors"]
-print("The computer selected", random.choice(computerChoice))
+computerChoice = random.choice(computerChoice)
+print("The computer selected", computerChoice)
 
 # DETERMINE THE WINNER
 
+result = "currentlyNull"
+if userInput == computerChoice:
+    result = "It's a tie"
+elif userInput == "rock" and computerChoice == 'scissors':
+    result = "You beat me"
+elif userInput == "scissors" and computerChoice == 'rock':
+    result = "I beat you"
+elif userInput == "rock" and computerChoice == 'paper':
+    result = "I beat you"
+elif userInput == "paper" and computerChoice == 'rock':
+    result = "You beat me"
+elif userInput == "paper" and computerChoice == 'scissors':
+    result = "I beat you"
+elif userInput == "scissors" and computerChoice == 'paper':
+    result = "You beat me"
+
 # FINAL RESULTS
+print(result)
