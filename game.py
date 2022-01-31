@@ -1,4 +1,6 @@
+# this is the "game.py" file...
 
+print("Rock, Paper, Scissors, Shoot!")
 
 
 #
@@ -8,12 +10,17 @@
 
 
 # ASK FOR USER INPUT
-userInput = input("Please enter your selection: 'rock', 'paper', 'scissors'")
+userInput = input("Please enter your selection: 'rock', 'paper', 'scissors'").lower()
+
+
 
 #VALIDATIONS
 print("USER CHOSE:", userInput)
-print(type(userInput))
 
+if userInput != "rock" and userInput != "paper" and userInput != "scissors":
+    print("Unfortuantely your input is not an acceptable option for this game. Please check your input's spelling ensuring it corresponds to one of the aforementioned options and run the program again.")
+    exit()
+    
 # COMPUTER CHOICE
 
 # DETERMINE THE WINNER
