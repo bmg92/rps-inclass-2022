@@ -37,3 +37,9 @@ Run tests:
 ```sh
 pytest
 ```
+
+# Naming
+If you'd like to add enter your name for the game to be more interactive, enter the following line of code prior to running the file replacing 'Jon Snow' with your own name 
+
+PLAYER_NAME="Jon Snow" python game.py
+

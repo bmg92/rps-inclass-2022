@@ -1,6 +1,13 @@
 # this is the "game.py" file...
 
+import os
+
+player_name = os.getenv("PLAYER_NAME", default="Player One")
+
+# ...
+
 print("Rock, Paper, Scissors, Shoot!")
+print("Welcome " +player_name +" to this game of Rock-Paper-Scissors. Let's go")
 
 
 #
@@ -12,7 +19,7 @@ print("Rock, Paper, Scissors, Shoot!")
 # ASK FOR USER INPUT
 userInput = input("Please enter your selection: 'rock', 'paper', 'scissors'").lower()
 
-
+#the above .lower() function serves as part of the data validation as the below if statement only evaluates lowercase words
 #VALIDATIONS
 print("USER CHOSE:", userInput)
 
@@ -28,7 +35,7 @@ print("The computer selected", computerChoice)
 
 # DETERMINE THE WINNER
 
-result = "currentlyNull"
+result = None
 if userInput == computerChoice:
     result = "It's a tie"
 elif userInput == "rock" and computerChoice == 'scissors':
@@ -46,3 +53,4 @@ elif userInput == "scissors" and computerChoice == 'paper':
 
 # FINAL RESULTS
 print(result)
+print("Good game - thanks for playing.")
